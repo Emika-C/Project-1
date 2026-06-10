@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Cats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🐱 CatHub</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#breeds">Breeds</a></li>
+                <li><a href="#care">Care</a></li>
+                <li><a href="#fun-facts">Fun Facts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to CatHub</h1>
+                <p>Discover everything you need to know about our feline friends</p>
+            </div>
+        </section>
+
+        <!-- Breeds Section -->
+        <section id="breeds" class="breeds">
+            <h2>Popular Cat Breeds</h2>
+            <div class="breeds-grid">
+                <div class="breed-card">
+                    <div class="breed-emoji">😺</div>
+                    <h3>Persian</h3>
+                    <p>Known for their long, luxurious coats and calm, gentle temperament. Perfect for relaxed households.</p>
+                </div>
+                <div class="breed-card">
+                    <div class="breed-emoji">😸</div>
+                    <h3>Siamese</h3>
+                    <p>Vocal, social, and highly intelligent. These cats are known for their striking blue eyes and pointed coloring.</p>
+                </div>
+                <div class="breed-card">
+                    <div class="breed-emoji">😻</div>
+                    <h3>Maine Coon</h3>
+                    <p>One of the largest domesticated cat breeds. Friendly, intelligent, and great with families.</p>
+                </div>
+                <div class="breed-card">
+                    <div class="breed-emoji">😼</div>
+                    <h3>Bengal</h3>
+                    <p>Athletic and playful with a leopard-like spotted coat. These cats are highly active and love to play.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Care Section -->
+        <section id="care" class="care">
+            <h2>Cat Care Tips</h2>
+            <div class="care-grid">
+                <div class="care-item">
+                    <h3>🍽️ Nutrition</h3>
+                    <p>Provide high-quality cat food with proper nutrients. Fresh water should always be available. Consult your vet about dietary needs.</p>
+                </div>
+                <div class="care-item">
+                    <h3>🏥 Health Checkups</h3>
+                    <p>Schedule regular veterinary visits. Keep vaccinations current and watch for signs of illness or discomfort.</p>
+                </div>
+                <div class="care-item">
+                    <h3>🎾 Exercise</h3>
+                    <p>Engage your cat with toys and playtime. Regular activity helps maintain a healthy weight and mental stimulation.</p>
+                </div>
+                <div class="care-item">
+                    <h3>🧼 Grooming</h3>
+                    <p>Brush your cat regularly, trim nails, and maintain dental hygiene. Long-haired cats need more frequent grooming.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun Facts Section -->
+        <section id="fun-facts" class="fun-facts">
+            <h2>Fun Cat Facts</h2>
+            <div class="facts-container">
+                <button class="fact-btn" onclick="showRandomFact()">Get a Random Fact</button>
+                <div id="fact-display" class="fact-display">
+                    <p id="fact-text">Click the button to discover a fun cat fact!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CatHub. All rights reserved. 🐾</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #ff6b6b;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ffa94d 100%);
+    color: white;
+    padding: 8rem 2rem;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 0.6s ease;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    animation: fadeInUp 0.6s ease;
+}
+
+/* Breeds Section */
+.breeds, .care, .fun-facts {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.breeds h2, .care h2, .fun-facts h2 {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.breeds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.breed-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.breed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.breed-emoji {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.breed-card h3 {
+    color: #ff6b6b;
+    margin-bottom: 0.5rem;
+}
+
+.breed-card p {
+    color: #666;
+}
+
+/* Care Section */
+.care-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.care-item {
+    background: white;
+    border-left: 4px solid #ff6b6b;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.care-item h3 {
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.care-item p {
+    color: #666;
+}
+
+/* Fun Facts Section */
+.facts-container {
+    text-align: center;
+}
+
+.fact-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 2rem;
+}
+
+.fact-btn:hover {
+    background-color: #ff5252;
+    transform: scale(1.05);
+}
+
+.fact-btn:active {
+    transform: scale(0.98);
+}
+
+.fact-display {
+    background: white;
+    border-left: 5px solid #ff6b6b;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fact-text {
+    font-size: 1.2rem;
+    color: #333;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .breeds h2, .care h2, .fun-facts h2 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        padding: 4rem 2rem;
+    }
+}
