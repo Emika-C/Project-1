@@ -3,95 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All About Cats</title>
+    <title>Emika Chihara - Personal Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">🐱 CatHub</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#breeds">Breeds</a></li>
-                <li><a href="#care">Care</a></li>
-                <li><a href="#fun-facts">Fun Facts</a></li>
-            </ul>
+    <header class="site-header">
+        <div class="brand">Emika Chihara</div>
+        <nav class="tab-nav">
+            <a href="#about">About Me</a>
+            <a href="#interests">Interests</a>
+            <a href="#favorites">Favorites</a>
+            <a href="#accomplishment">Accomplishment</a>
+            <a href="#goal">Goal</a>
+            <a href="#find-me">Find Me</a>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Welcome to CatHub</h1>
-                <p>Discover everything you need to know about our feline friends</p>
-            </div>
-        </section>
+        <div class="content-panel">
+            <section id="about" class="section">
+                <h2>About Me</h2>
+                <p>I am Emika Chihara, a 15-year-old Energy Institute High School student. I enjoy piano and art, learning new songs and starting art projects whenever having free time. Currently, I am focusing on my academics to build a strong foundation for my future.</p>
+            </section>
 
-        <!-- Breeds Section -->
-        <section id="breeds" class="breeds">
-            <h2>Popular Cat Breeds</h2>
-            <div class="breeds-grid">
-                <div class="breed-card">
-                    <div class="breed-emoji">😺</div>
-                    <h3>Persian</h3>
-                    <p>Known for their long, luxurious coats and calm, gentle temperament. Perfect for relaxed households.</p>
+            <section id="interests" class="section">
+                <h2>Interests</h2>
+                <p>I enjoy playing piano and exploring various art mediums, such as sculpting, painting, drawing, crocheting, and 3D modeling.</p>
+                <div class="interest-grid">
+                    <article class="interest-card">
+                        <span class="icon">🎹</span>
+                        <p class="interest-title">Piano</p>
+                        <p class="interest-desc">Learn new pieces and practice technique to express emotion through music.</p>
+                    </article>
+                    <article class="interest-card">
+                        <span class="icon">🎨</span>
+                        <p class="interest-title">Painting</p>
+                        <p class="interest-desc">Experiment with color and texture to create mood and atmosphere on canvas.</p>
+                    </article>
+                    <article class="interest-card">
+                        <span class="icon">✏️</span>
+                        <p class="interest-title">Drawing</p>
+                        <p class="interest-desc">Sketching daily to capture ideas and sharpen observation and composition skills.</p>
+                    </article>
+                    <article class="interest-card">
+                        <span class="icon">🧶</span>
+                        <p class="interest-title">Crocheting</p>
+                        <p class="interest-desc">Making small handmade projects and exploring patterns with yarn.</p>
+                    </article>
+                    <article class="interest-card">
+                        <span class="icon">🏺</span>
+                        <p class="interest-title">Sculpting</p>
+                        <p class="interest-desc">Shaping materials to explore form, texture, and spatial relationships.</p>
+                    </article>
+                    <article class="interest-card">
+                        <span class="icon">🛠️</span>
+                        <p class="interest-title">3D Modeling</p>
+                        <p class="interest-desc">Creation of digital models for design experiments and potential 3D printing.</p>
+                    </article>
                 </div>
-                <div class="breed-card">
-                    <div class="breed-emoji">😸</div>
-                    <h3>Siamese</h3>
-                    <p>Vocal, social, and highly intelligent. These cats are known for their striking blue eyes and pointed coloring.</p>
-                </div>
-                <div class="breed-card">
-                    <div class="breed-emoji">😻</div>
-                    <h3>Maine Coon</h3>
-                    <p>One of the largest domesticated cat breeds. Friendly, intelligent, and great with families.</p>
-                </div>
-                <div class="breed-card">
-                    <div class="breed-emoji">😼</div>
-                    <h3>Bengal</h3>
-                    <p>Athletic and playful with a leopard-like spotted coat. These cats are highly active and love to play.</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Care Section -->
-        <section id="care" class="care">
-            <h2>Cat Care Tips</h2>
-            <div class="care-grid">
-                <div class="care-item">
-                    <h3>🍽️ Nutrition</h3>
-                    <p>Provide high-quality cat food with proper nutrients. Fresh water should always be available. Consult your vet about dietary needs.</p>
+            <section id="favorites" class="section">
+                <h2>Favorites</h2>
+                <p>Some of my favorites include sushi as my favorite food, cats as my favorite animal, blue and purple as my favorite colors, and biology and engineering as my favorite subjects.</p>
+                <div class="favorites-grid">
+                    <article class="favorite-card">
+                        <span class="fav-icon">🍣</span>
+                        <p>Sushi — Favorite Food</p>
+                        <span class="fav-icon">🥢</span>
+                    </article>
+                    <article class="favorite-card">
+                        <span class="fav-icon">🐱</span>
+                        <p>Cats — Favorite Animal</p>
+                        <span class="fav-icon">🐈</span>
+                    </article>
+                    <article class="favorite-card">
+                        <span class="fav-icon">🔵</span>
+                        <p>Blue & Purple — Favorite Colors</p>
+                        <span class="fav-icon">🟣</span>
+                    </article>
+                    <article class="favorite-card">
+                        <span class="fav-icon">🧬</span>
+                        <p>Biology & Engineering — Favorite Subjects</p>
+                        <span class="fav-icon">⚙️</span>
+                    </article>
                 </div>
-                <div class="care-item">
-                    <h3>🏥 Health Checkups</h3>
-                    <p>Schedule regular veterinary visits. Keep vaccinations current and watch for signs of illness or discomfort.</p>
-                </div>
-                <div class="care-item">
-                    <h3>🎾 Exercise</h3>
-                    <p>Engage your cat with toys and playtime. Regular activity helps maintain a healthy weight and mental stimulation.</p>
-                </div>
-                <div class="care-item">
-                    <h3>🧼 Grooming</h3>
-                    <p>Brush your cat regularly, trim nails, and maintain dental hygiene. Long-haired cats need more frequent grooming.</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Fun Facts Section -->
-        <section id="fun-facts" class="fun-facts">
-            <h2>Fun Cat Facts</h2>
-            <div class="facts-container">
-                <button class="fact-btn" onclick="showRandomFact()">Get a Random Fact</button>
-                <div id="fact-display" class="fact-display">
-                    <p id="fact-text">Click the button to discover a fun cat fact!</p>
-                </div>
-            </div>
-        </section>
+            <section id="accomplishment" class="section">
+                <h2>Accomplishment</h2>
+                <p>At my school, we host exhibitions to showcase our month-long projects. In the past, presenting these projects has always caused me some anxiety and stress. However, I believe I have been improving in my public speaking and presentation skills. I feel proud of the progress I have made, even if small.</p>
+            </section>
+
+            <section id="goal" class="section">
+                <h2>Goal</h2>
+                <p>Currently, I am focused on working in more leadership positions and earning volunteering hours. To achieve this, I have volunteered at my school, pursued service opportunities, and am working towards creating an art-based club.</p>
+            </section>
+
+            <section id="find-me" class="section">
+                <h2>Find Me</h2>
+                <p>My email is emikachihara2026498@gmail.com</p>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 CatHub. All rights reserved. 🐾</p>
+        <span>© 2026 Emika Chihara</span>
     </footer>
 
     <script src="script.js"></script>
