@@ -5,29 +5,103 @@
 }
 
 body {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: Georgia, 'Times New Roman', serif;
     line-height: 1.6;
     color: #2f2f3f;
     background: linear-gradient(180deg, #708ce6 0%, #8249c4 100%);
     min-height: 100vh;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    position: relative;
 }
 
 body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background: radial-gradient(circle at top left, rgba(255,255,255,0.35), transparent 30%),
-                radial-gradient(circle at bottom right, rgba(255,255,255,0.2), transparent 25%);
+    z-index: 0;
     pointer-events: none;
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 5 L58 39 L95 50 L58 61 L50 95 L42 61 L5 50 L42 39 Z' fill='white'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 L61 37 L90 50 L61 63 L50 90 L39 63 L10 50 L39 37 Z' fill='none' stroke='white' stroke-width='4.5' stroke-linejoin='round'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 8 L57 40 L92 50 L57 60 L50 92 L43 60 L8 50 L43 40 Z' fill='white'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 15 L59 41 L85 50 L59 59 L50 85 L41 59 L15 50 L41 41 Z' fill='none' stroke='white' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 7 L56 39 L93 50 L56 61 L50 93 L44 61 L7 50 L44 39 Z' fill='white'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 12 L59 39 L88 50 L59 61 L50 88 L41 61 L12 50 L41 39 Z' fill='none' stroke='white' stroke-width='3.8' stroke-linejoin='round'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 6 L60 40 L94 50 L60 60 L50 94 L40 60 L6 50 L40 40 Z' fill='white'/%3E%3C/svg%3E"),
+        radial-gradient(circle at 11% 19%, rgba(255, 255, 255, 0.92) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 23% 67%, rgba(255, 255, 255, 0.85) 0 0.85px, transparent 1.2px),
+        radial-gradient(circle at 37% 31%, rgba(255, 255, 255, 0.9) 0 1px, transparent 1.4px),
+        radial-gradient(circle at 54% 13%, rgba(255, 255, 255, 0.84) 0 0.9px, transparent 1.3px),
+        radial-gradient(circle at 68% 43%, rgba(255, 255, 255, 0.9) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 82% 17%, rgba(255, 255, 255, 0.82) 0 0.85px, transparent 1.2px),
+        radial-gradient(circle at 19% 49%, rgba(255, 255, 255, 0.78) 0 0.8px, transparent 1.15px),
+        radial-gradient(circle at 91% 34%, rgba(255, 255, 255, 0.88) 0 0.9px, transparent 1.25px),
+        radial-gradient(circle at 74% 78%, rgba(255, 255, 255, 0.8) 0 0.85px, transparent 1.2px),
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.35), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.2), transparent 25%);
+    background-repeat: no-repeat;
+    background-position:
+        10% 16%,
+        42% 12%,
+        84% 20%,
+        26% 66%,
+        60% 30%,
+        74% 58%,
+        14% 84%,
+        center center,
+        center center,
+        center center,
+        center center,
+        center center,
+        center center,
+        center center,
+        center center,
+        center center,
+        top left,
+        bottom right;
+    background-size:
+        8rem 8rem,
+        6rem 6rem,
+        5.4rem 5.4rem,
+        4.8rem 4.8rem,
+        4.2rem 4.2rem,
+        4.6rem 4.6rem,
+        5rem 5rem,
+        auto,
+        auto,
+        auto,
+        auto,
+        auto,
+        auto,
+        auto,
+        auto,
+        auto,
+        auto,
+        auto;
 }
 
-/* Header & Navigation */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle at 13% 83%, rgba(255, 255, 255, 0.72) 0 0.75px, transparent 1.1px),
+        radial-gradient(circle at 29% 22%, rgba(255, 255, 255, 0.58) 0 0.7px, transparent 1px),
+        radial-gradient(circle at 45% 74%, rgba(255, 255, 255, 0.66) 0 0.75px, transparent 1.05px),
+        radial-gradient(circle at 57% 56%, rgba(255, 255, 255, 0.54) 0 0.7px, transparent 1px),
+        radial-gradient(circle at 69% 88%, rgba(255, 255, 255, 0.62) 0 0.75px, transparent 1.05px),
+        radial-gradient(circle at 86% 9%, rgba(255, 255, 255, 0.52) 0 0.7px, transparent 1px);
+    opacity: 0.75;
+}
+
+header.site-header,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
 header.site-header {
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(15px);
@@ -77,6 +151,13 @@ header.site-header {
     box-shadow: 0 10px 20px rgba(90, 54, 160, 0.12);
 }
 
+.tab-nav a.active {
+    background: #5d3ca8;
+    color: #ffffff;
+    border-color: #5d3ca8;
+    box-shadow: 0 10px 20px rgba(90, 54, 160, 0.18);
+}
+
 main {
     max-width: 1100px;
     margin: 0 auto;
@@ -93,19 +174,14 @@ main {
 
 .section {
     padding: 2.5rem 3rem;
-    border-bottom: 1px solid rgba(130, 73, 196, 0.1);
     text-align: center;
-}
-
-.section:last-of-type {
-    border-bottom: none;
 }
 
 .section h2 {
     color: #5d3ca8;
     font-size: 2.1rem;
     margin-bottom: 1rem;
-    font-family: 'Georgia', serif;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 .section p {
@@ -153,7 +229,15 @@ main {
     font-weight: 600;
 }
 
-/* Favorites styling */
+.interest-desc {
+    color: #545066;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 260px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
 .favorites-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -177,18 +261,8 @@ main {
     width: 2rem;
 }
 
-.interest-desc {
-    color: #545066;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    max-width: 260px;
-    margin: 0 auto;
-    font-weight: 400;
-}
-
 footer {
     text-align: center;
-    background-color: #5d3ca8;
     color: #ffffff;
     padding: 1.5rem 1rem 2rem;
     font-size: 0.95rem;
@@ -219,239 +293,12 @@ footer {
         font-size: 0.95rem;
     }
 
-    .interest-grid {
+    .interest-grid,
+    .favorites-grid {
         grid-template-columns: 1fr;
     }
 
     main {
         padding: 1.5rem 1rem 2rem;
-    }
-}
-
-.nav-links a:hover {
-    opacity: 0.7;
-}
-
-/* Main Content */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.section {
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    margin: 2rem 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.section h2 {
-    color: #8249c4;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-family: Georgia, 'Times New Roman', serif;
-}
-
-.section p {
-    color: #555;
-    font-size: 1.1rem;
-}
-
-.nav-links a:hover {
-    opacity: 0.8;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ffa94d 100%);
-    color: white;
-    padding: 8rem 2rem;
-    text-align: center;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    animation: fadeInDown 0.6s ease;
-}
-
-.hero-content p {
-    font-size: 1.3rem;
-    animation: fadeInUp 0.6s ease;
-}
-
-/* Breeds Section */
-.breeds, .care, .fun-facts {
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0 2rem;
-}
-
-.breeds h2, .care h2, .fun-facts h2 {
-    font-size: 2.5rem;
-    color: #ff6b6b;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.breeds-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.breed-card {
-    background: white;
-    border-radius: 10px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.breed-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.breed-emoji {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.breed-card h3 {
-    color: #ff6b6b;
-    margin-bottom: 0.5rem;
-}
-
-.breed-card p {
-    color: #666;
-}
-
-/* Care Section */
-.care-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.care-item {
-    background: white;
-    border-left: 4px solid #ff6b6b;
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.care-item h3 {
-    color: #ff6b6b;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-
-.care-item p {
-    color: #666;
-}
-
-/* Fun Facts Section */
-.facts-container {
-    text-align: center;
-}
-
-.fact-btn {
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-bottom: 2rem;
-}
-
-.fact-btn:hover {
-    background-color: #ff5252;
-    transform: scale(1.05);
-}
-
-.fact-btn:active {
-    transform: scale(0.98);
-}
-
-.fact-display {
-    background: white;
-    border-left: 5px solid #ff6b6b;
-    padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#fact-text {
-    font-size: 1.2rem;
-    color: #333;
-    font-style: italic;
-}
-
-/* Footer */
-footer {
-    background-color: white;
-    color: #3d3d4f;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-    border-top: 1px solid rgba(130, 73, 196, 0.08);
-}
-
-/* Animations */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .nav-links {
-        gap: 1rem;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .breeds h2, .care h2, .fun-facts h2 {
-        font-size: 2rem;
-    }
-
-    .hero {
-        padding: 4rem 2rem;
     }
 }

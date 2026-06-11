@@ -1,13 +1,9 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+const currentKey = currentPage.replace('.html', '');
+
+document.querySelectorAll('.tab-nav a').forEach((link) => {
+    if (link.dataset.nav === currentKey) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+    }
 });
