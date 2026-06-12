@@ -35,24 +35,18 @@ body::before {
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M60 8 L72 48 L112 60 L72 72 L60 112 L48 72 L8 60 L48 48 Z' fill='white'/%3E%3Cpath d='M20 18 L24 30 L36 34 L24 38 L20 50 L16 38 L4 34 L16 30 Z' fill='white'/%3E%3Cpath d='M96 16 L100 28 L112 32 L100 36 L96 48 L92 36 L80 32 L92 28 Z' fill='white'/%3E%3Cpath d='M18 82 L22 94 L34 98 L22 102 L18 114 L14 102 L2 98 L14 94 Z' fill='white'/%3E%3C/svg%3E"),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M60 8 L72 48 L112 60 L72 72 L60 112 L48 72 L8 60 L48 48 Z' fill='white'/%3E%3Cpath d='M20 18 L24 30 L36 34 L24 38 L20 50 L16 38 L4 34 L16 30 Z' fill='white'/%3E%3Cpath d='M96 16 L100 28 L112 32 L100 36 L96 48 L92 36 L80 32 L92 28 Z' fill='white'/%3E%3Cpath d='M18 82 L22 94 L34 98 L22 102 L18 114 L14 102 L2 98 L14 94 Z' fill='white'/%3E%3C/svg%3E"),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M60 8 L72 48 L112 60 L72 72 L60 112 L48 72 L8 60 L48 48 Z' fill='white'/%3E%3Cpath d='M20 18 L24 30 L36 34 L24 38 L20 50 L16 38 L4 34 L16 30 Z' fill='white'/%3E%3Cpath d='M96 16 L100 28 L112 32 L100 36 L96 48 L92 36 L80 32 L92 28 Z' fill='white'/%3E%3Cpath d='M18 82 L22 94 L34 98 L22 102 L18 114 L14 102 L2 98 L14 94 Z' fill='white'/%3E%3C/svg%3E"),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M60 8 L72 48 L112 60 L72 72 L60 112 L48 72 L8 60 L48 48 Z' fill='white'/%3E%3Cpath d='M20 18 L24 30 L36 34 L24 38 L20 50 L16 38 L4 34 L16 30 Z' fill='white'/%3E%3Cpath d='M96 16 L100 28 L112 32 L100 36 L96 48 L92 36 L80 32 L92 28 Z' fill='white'/%3E%3Cpath d='M18 82 L22 94 L34 98 L22 102 L18 114 L14 102 L2 98 L14 94 Z' fill='white'/%3E%3C/svg%3E"),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M60 8 L72 48 L112 60 L72 72 L60 112 L48 72 L8 60 L48 48 Z' fill='white'/%3E%3Cpath d='M20 18 L24 30 L36 34 L24 38 L20 50 L16 38 L4 34 L16 30 Z' fill='white'/%3E%3Cpath d='M96 16 L100 28 L112 32 L100 36 L96 48 L92 36 L80 32 L92 28 Z' fill='white'/%3E%3Cpath d='M18 82 L22 94 L34 98 L22 102 L18 114 L14 102 L2 98 L14 94 Z' fill='white'/%3E%3C/svg%3E"),
         radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), transparent 36%),
         radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.14), transparent 34%);
     background-repeat: no-repeat;
     background-position:
-        10% 12%,
-        50% 10%,
-        90% 18%,
-        20% 72%,
-        85% 80%,
+        13% 64%,
+        86% 38%,
+        64% 92%,
         top left,
         bottom right;
     background-size:
         8rem 8rem,
         8rem 8rem,
-        7rem 7rem,
-        7rem 7rem,
         8rem 8rem,
         auto,
         auto;
@@ -83,12 +77,15 @@ header.site-header {
     backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(130, 73, 196, 0.18);
     padding: 1.5rem 0;
+    text-align: center;
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .site-header .brand {
+    position: relative;
+    display: inline-block;
     font-size: 2.6rem;
     font-weight: 700;
     color: #5d3ca8;
@@ -96,6 +93,65 @@ header.site-header {
     letter-spacing: 0.08em;
     font-family: 'CK Jot', cursive;
     margin-bottom: 1rem;
+    isolation: isolate;
+}
+
+.brand-cat-trigger {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.35);
+    opacity: 0;
+    font-size: 3.2rem;
+    z-index: -1;
+    filter: drop-shadow(0 6px 10px rgba(68, 45, 130, 0.25));
+    transition: transform 220ms ease, opacity 220ms ease;
+    pointer-events: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.site-header .brand.cat-visible .brand-cat-trigger,
+.site-header .brand.cat-active .brand-cat-trigger {
+    opacity: 0.95;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+
+.cat-rain-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.cat-drop {
+    position: absolute;
+    top: -12vh;
+    left: 0;
+    transform: translateX(0) rotate(0deg);
+    animation: cat-fall linear forwards;
+    will-change: transform, opacity;
+}
+
+.cat-drop.star-drop {
+    color: #f3ecff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+@keyframes cat-fall {
+    0% {
+        transform: translate3d(0, -10vh, 0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(0, 120vh, 0) rotate(350deg);
+        opacity: 0;
+    }
 }
 
 .tab-nav {
