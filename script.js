@@ -13,27 +13,55 @@ const catLayer = document.createElement('div');
 catLayer.className = 'cat-rain-layer';
 document.body.appendChild(catLayer);
 
+const catImageNames = [
+    'cat_-__1_apple-removebg-preview.png',
+    'cat_-__2_orange-removebg-preview.png',
+    'cat_-__3_pineapple-removebg-preview.png',
+    'cat_-__4_green_apple-removebg-preview.png',
+    'cat_-__5_blueberry-removebg-preview.png',
+    'cat_-__6_eggplant-removebg-preview.png',
+    'cat_-__7_strawberry-removebg-preview.png',
+    'cat - #8 construction.png',
+    'cat - #10 drawing.png',
+    'cat - #12 intro.png'
+];
+
+const catImages = catImageNames.map((fileName) => `assets/fonts/${encodeURIComponent(fileName)}`);
+
 let catCooldown = false;
 let brandActiveTimeout = null;
 let hoverRevealTimeout = null;
 
-function createShowerDrop(character, isStar) {
-    const drop = document.createElement('span');
-    drop.className = isStar ? 'cat-drop star-drop' : 'cat-drop';
-    drop.textContent = character;
-
+function createShowerDrop(isStar) {
     const x = Math.random() * 100;
     const duration = 1800 + Math.random() * 2200;
     const delay = Math.random() * 650;
-    const size = isStar ? 0.9 + Math.random() * 1.1 : 1.1 + Math.random() * 1.2;
 
-    drop.style.left = x + 'vw';
-    drop.style.fontSize = size + 'rem';
-    drop.style.animationDuration = duration + 'ms';
-    drop.style.animationDelay = delay + 'ms';
-
-    catLayer.appendChild(drop);
-    drop.addEventListener('animationend', () => drop.remove());
+    if (isStar) {
+        const starDrop = document.createElement('span');
+        starDrop.className = 'cat-drop star-drop';
+        starDrop.textContent = Math.random() < 0.5 ? '⭐' : '✨';
+        const starSize = 0.9 + Math.random() * 1.1;
+        starDrop.style.left = x + 'vw';
+        starDrop.style.fontSize = starSize + 'rem';
+        starDrop.style.animationDuration = duration + 'ms';
+        starDrop.style.animationDelay = delay + 'ms';
+        catLayer.appendChild(starDrop);
+        starDrop.addEventListener('animationend', () => starDrop.remove());
+    } else {
+        const catDrop = document.createElement('img');
+        catDrop.className = 'cat-drop';
+        catDrop.src = catImages[Math.floor(Math.random() * catImages.length)];
+        catDrop.alt = 'falling cat';
+        const catSize = 50 + Math.random() * 80;
+        catDrop.style.left = x + 'vw';
+        catDrop.style.width = catSize + 'px';
+        catDrop.style.height = 'auto';
+        catDrop.style.animationDuration = duration + 'ms';
+        catDrop.style.animationDelay = delay + 'ms';
+        catLayer.appendChild(catDrop);
+        catDrop.addEventListener('animationend', () => catDrop.remove());
+    }
 }
 
 function triggerCatShower() {
@@ -46,8 +74,7 @@ function triggerCatShower() {
 
     for (let i = 0; i < 46; i += 1) {
         const isStar = Math.random() < 0.35;
-        const char = isStar ? (Math.random() < 0.5 ? '⭐' : '✨') : '🐱';
-        createShowerDrop(char, isStar);
+        createShowerDrop(isStar);
     }
 
     if (brandActiveTimeout) {

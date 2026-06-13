@@ -140,12 +140,22 @@ header.site-header {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
+.cat-drop[src] {
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    opacity: 1;
+}
+
 @keyframes cat-fall {
     0% {
         transform: translate3d(0, -10vh, 0) rotate(0deg);
         opacity: 0;
     }
-    10% {
+    50% {
+        opacity: 1;
+    }
+    63% {
         opacity: 1;
     }
     100% {
