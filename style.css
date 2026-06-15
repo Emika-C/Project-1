@@ -242,6 +242,29 @@ main {
 }
 
 .interest-card {
+    min-height: 170px;
+    perspective: 1000px;
+    border-radius: 18px;
+    outline: none;
+}
+
+.interest-card-inner {
+    position: relative;
+    width: 100%;
+    min-height: 170px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.interest-card:hover .interest-card-inner,
+.interest-card:focus-visible .interest-card-inner,
+.interest-card:focus-within .interest-card-inner {
+    transform: rotateY(180deg);
+}
+
+.interest-face {
+    position: absolute;
+    inset: 0;
     background: rgba(118, 95, 227, 0.08);
     border: 1px solid rgba(130, 73, 196, 0.18);
     padding: 1.2rem 1rem;
@@ -251,7 +274,12 @@ main {
     align-items: center;
     justify-content: center;
     gap: 0.85rem;
-    min-height: 140px;
+    backface-visibility: hidden;
+}
+
+.interest-back {
+    transform: rotateY(180deg);
+    background: rgba(118, 95, 227, 0.12);
 }
 
 .interest-card .icon {
@@ -288,14 +316,50 @@ main {
 }
 
 .favorite-card {
+    min-height: 130px;
+    perspective: 1000px;
+    border-radius: 14px;
+    outline: none;
+}
+
+.favorite-card-inner {
+    position: relative;
+    width: 100%;
+    min-height: 130px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.favorite-card:hover .favorite-card-inner,
+.favorite-card:focus-visible .favorite-card-inner,
+.favorite-card:focus-within .favorite-card-inner {
+    transform: rotateY(180deg);
+}
+
+.favorite-face {
+    position: absolute;
+    inset: 0;
     background: rgba(118, 95, 227, 0.06);
     border: 1px solid rgba(130, 73, 196, 0.12);
     padding: 0.9rem 1rem;
     border-radius: 14px;
     display: flex;
     align-items: center;
-    gap: 0.85rem;
     justify-content: center;
+    gap: 0.65rem;
+    backface-visibility: hidden;
+}
+
+.favorite-back {
+    transform: rotateY(180deg);
+    background: rgba(118, 95, 227, 0.12);
+}
+
+.favorite-label,
+.favorite-value {
+    color: #836abf;
+    font-weight: 700;
+    line-height: 1.35;
 }
 
 .fav-icon {
