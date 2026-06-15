@@ -222,8 +222,30 @@ main {
 .section h2 {
     color: #5d3ca8;
     font-size: 2.1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.15rem;
     font-family: 'CK Jot', cursive;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 1.35rem;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -0.9rem;
+    transform: translateX(-50%);
+    width: 23rem;
+    height: 4.6rem;
+    background-color: currentColor;
+    -webkit-mask-image: url("assets/fonts/new-vibe-coding-3-personal-website-underline.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-image: url("assets/fonts/new-vibe-coding-3-personal-website-underline.png");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
 }
 
 .section p {
