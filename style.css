@@ -264,7 +264,7 @@ main {
 }
 
 .interest-card {
-    min-height: 170px;
+    min-height: 240px;
     perspective: 1000px;
     border-radius: 18px;
     outline: none;
@@ -273,7 +273,7 @@ main {
 .interest-card-inner {
     position: relative;
     width: 100%;
-    min-height: 170px;
+    min-height: 240px;
     transform-style: preserve-3d;
     transition: transform 0.6s ease;
 }
@@ -281,6 +281,10 @@ main {
 .interest-card:hover .interest-card-inner,
 .interest-card:focus-visible .interest-card-inner,
 .interest-card:focus-within .interest-card-inner {
+    transform: rotateY(180deg);
+}
+
+.interest-card.is-flipped .interest-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -301,7 +305,44 @@ main {
 
 .interest-back {
     transform: rotateY(180deg);
-    background: rgba(118, 95, 227, 0.12);
+    position: relative;
+    justify-content: flex-end;
+    background-color: rgba(118, 95, 227, 0.12);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.interest-back::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.92) 24%, rgba(255, 255, 255, 0.18) 72%);
+}
+
+.interest-card:nth-child(1) .interest-back {
+    background-image: url('assets/interests/piano.jpg');
+}
+
+.interest-card:nth-child(2) .interest-back {
+    background-image: url('assets/interests/painting.jpg');
+}
+
+.interest-card:nth-child(3) .interest-back {
+    background-image: url('assets/interests/drawing.jpg');
+}
+
+.interest-card:nth-child(4) .interest-back {
+    background-image: url('assets/interests/crocheting.jpg');
+}
+
+.interest-card:nth-child(5) .interest-back {
+    background-image: url('assets/interests/sculpting.jpg');
+}
+
+.interest-card:nth-child(6) .interest-back {
+    background-image: url('assets/interests/modeling-3d.jpg');
 }
 
 .interest-card .icon {
@@ -328,6 +369,21 @@ main {
     max-width: 260px;
     margin: 0 auto;
     font-weight: 700;
+}
+
+.interest-back .interest-desc {
+    color: #5f4d97;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: none;
+    padding: 0.55rem 0.6rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.76);
+}
+
+.interest-back-image {
+    display: none;
 }
 
 .favorites-grid {

@@ -127,3 +127,27 @@ if (brand) {
         }
     });
 }
+
+// Support click/tap flip on interest cards for touch devices.
+const interestCards = document.querySelectorAll('.interest-card');
+
+interestCards.forEach((card) => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('is-flipped');
+    });
+
+    card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            card.classList.toggle('is-flipped');
+        }
+    });
+});
+
+document.addEventListener('click', (event) => {
+    interestCards.forEach((card) => {
+        if (!card.contains(event.target)) {
+            card.classList.remove('is-flipped');
+        }
+    });
+});

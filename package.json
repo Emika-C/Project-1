@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "live-server --port=5500 --host=0.0.0.0 --open=index.html --watch=./"
+    "dev": "live-server --port=5500 --host=0.0.0.0 --open=index.html --watch=index.html,interests.html,favorites.html,accomplishment.html,goal.html,find-me.html,style.css,script.js"
   },
   "devDependencies": {
     "live-server": "^1.2.2"
