@@ -22,7 +22,7 @@ html {
     --header-border: rgba(130, 73, 196, 0.18);
     --brand-color: #5d3ca8;
     --tab-bg: rgba(255, 255, 255, 0.95);
-    --tab-text: #5d3ca8;
+    --tab-text: var(--heading-color);
     --tab-hover-bg: rgba(130, 73, 196, 0.08);
     --tab-shadow: rgba(90, 54, 160, 0.12);
     --tab-active-bg: #5d3ca8;
@@ -52,7 +52,7 @@ body.dark-mode {
     --header-border: rgba(93, 60, 168, 0.42);
     --brand-color: #c9b3f2;
     --tab-bg: rgba(0, 0, 0, 0.9);
-    --tab-text: #c8b2f0;
+    --tab-text: var(--heading-color);
     --tab-hover-bg: rgba(130, 73, 196, 0.32);
     --tab-shadow: rgba(30, 16, 58, 0.55);
     --tab-active-bg: #4a318a;
@@ -149,7 +149,7 @@ header.site-header {
     display: inline-block;
     font-size: 2.6rem;
     font-weight: 700;
-    color: var(--card-title);
+    color: var(--heading-color);
     text-align: center;
     letter-spacing: 0.08em;
     font-family: 'CK Jot', cursive;
@@ -338,6 +338,18 @@ main {
     line-height: 1.65;
     max-width: 860px;
     margin: 0 auto;
+}
+
+.contact-email {
+    color: var(--body-copy);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    transition: color 0.2s ease;
+}
+
+.contact-email:hover,
+.contact-email:focus-visible {
+    color: var(--heading-color);
 }
 
 .interest-grid {

@@ -163,6 +163,12 @@ if (brand) {
             triggerCatShower();
         }
     });
+
+    brand.addEventListener('click', () => {
+        if (brand.classList.contains('cat-visible')) {
+            triggerCatShower();
+        }
+    });
 }
 
 // Support click/tap flip on interest cards for touch devices.
