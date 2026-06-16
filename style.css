@@ -46,33 +46,33 @@ html {
 }
 
 body.dark-mode {
-    --page-text: #dccdff;
-    --page-gradient: linear-gradient(180deg, #141229 0%, #1a1730 55%, #271d41 100%);
-    --header-bg: rgba(18, 16, 33, 0.86);
-    --header-border: rgba(195, 173, 255, 0.22);
-    --brand-color: #e8ddff;
-    --tab-bg: rgba(45, 37, 73, 0.9);
-    --tab-text: #e7dbff;
-    --tab-hover-bg: rgba(128, 93, 224, 0.34);
+    --page-text: #dccbff;
+    --page-gradient: linear-gradient(180deg, #060b1e 0%, #0d1736 52%, #1a1140 100%);
+    --header-bg: rgba(0, 0, 0, 0.86);
+    --header-border: rgba(198, 176, 255, 0.24);
+    --brand-color: #d9c4ff;
+    --tab-bg: rgba(0, 0, 0, 0.82);
+    --tab-text: #e2d2ff;
+    --tab-hover-bg: rgba(139, 108, 229, 0.36);
     --tab-shadow: rgba(8, 6, 20, 0.45);
-    --tab-active-bg: #8a68df;
-    --tab-active-text: #ffffff;
-    --panel-bg: rgba(24, 20, 42, 0.92);
-    --panel-border: rgba(197, 174, 255, 0.22);
+    --tab-active-bg: #b29af0;
+    --tab-active-text: #000000;
+    --panel-bg: rgba(0, 0, 0, 0.82);
+    --panel-border: rgba(198, 176, 255, 0.25);
     --panel-shadow: rgba(5, 4, 14, 0.5);
-    --heading-color: #f0e6ff;
-    --body-copy: #d2bfff;
-    --card-face-bg: rgba(72, 58, 118, 0.55);
+    --heading-color: #ece1ff;
+    --body-copy: #e8dbff;
+    --card-face-bg: rgba(20, 13, 42, 0.76);
     --card-face-border: rgba(188, 161, 255, 0.3);
-    --card-back-bg: rgba(69, 55, 115, 0.65);
-    --card-title: #eadcff;
-    --card-description: #efe8ff;
-    --desc-panel-bg: rgba(18, 14, 34, 0.68);
-    --toggle-bg: rgba(45, 37, 73, 0.95);
-    --toggle-text: #f1e8ff;
+    --card-back-bg: rgba(16, 10, 36, 0.82);
+    --card-title: #e8d9ff;
+    --card-description: #f3edff;
+    --desc-panel-bg: rgba(0, 0, 0, 0.64);
+    --toggle-bg: rgba(0, 0, 0, 0.88);
+    --toggle-text: #eedfff;
     --toggle-border: rgba(197, 174, 255, 0.35);
     --toggle-shadow: rgba(7, 6, 17, 0.5);
-    --footer-text: #dcccff;
+    --footer-text: #e3d4ff;
 }
 
 body {
@@ -488,8 +488,14 @@ footer {
     font-size: 0.95rem;
 }
 
+body.dark-mode::before {
+    opacity: 0.2;
+    filter: brightness(0.22);
+}
+
 body.dark-mode::after {
-    opacity: 0.45;
+    opacity: 0.22;
+    filter: brightness(0.3);
 }
 
 @media (max-width: 960px) {
