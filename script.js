@@ -8,6 +8,43 @@ document.querySelectorAll('.tab-nav a').forEach((link) => {
     }
 });
 
+const themeStorageKey = 'emika-theme';
+const siteHeader = document.querySelector('.site-header');
+let themeToggle = null;
+
+function applyTheme(theme) {
+    const isDark = theme === 'dark';
+    document.body.classList.toggle('dark-mode', isDark);
+
+    if (themeToggle) {
+        themeToggle.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+        themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+}
+
+function getInitialTheme() {
+    const savedTheme = window.localStorage.getItem(themeStorageKey);
+    if (savedTheme === 'dark' || savedTheme === 'light') {
+        return savedTheme;
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+if (siteHeader) {
+    themeToggle = document.createElement('button');
+    themeToggle.className = 'theme-toggle';
+    themeToggle.type = 'button';
+    siteHeader.appendChild(themeToggle);
+
+    themeToggle.addEventListener('click', () => {
+        const nextTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+        window.localStorage.setItem(themeStorageKey, nextTheme);
+        applyTheme(nextTheme);
+    });
+}
+
+applyTheme(getInitialTheme());
+
 const brand = document.querySelector('.site-header .brand');
 const catLayer = document.createElement('div');
 catLayer.className = 'cat-rain-layer';

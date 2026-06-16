@@ -15,12 +15,72 @@ html {
     font-style: normal;
 }
 
+:root {
+    --page-text: #8c74c4;
+    --page-gradient: linear-gradient(180deg, #6677d7 0%, #8b72d2 52%, #b67cc5 100%);
+    --header-bg: rgba(255, 255, 255, 0.85);
+    --header-border: rgba(130, 73, 196, 0.18);
+    --brand-color: #5d3ca8;
+    --tab-bg: rgba(255, 255, 255, 0.95);
+    --tab-text: #5d3ca8;
+    --tab-hover-bg: rgba(130, 73, 196, 0.08);
+    --tab-shadow: rgba(90, 54, 160, 0.12);
+    --tab-active-bg: #5d3ca8;
+    --tab-active-text: #ffffff;
+    --panel-bg: rgba(255, 255, 255, 0.92);
+    --panel-border: rgba(255, 255, 255, 0.8);
+    --panel-shadow: rgba(22, 22, 52, 0.12);
+    --heading-color: #5d3ca8;
+    --body-copy: #8a76be;
+    --card-face-bg: rgba(118, 95, 227, 0.08);
+    --card-face-border: rgba(130, 73, 196, 0.18);
+    --card-back-bg: rgba(118, 95, 227, 0.12);
+    --card-title: #836abf;
+    --card-description: #5f4d97;
+    --desc-panel-bg: rgba(255, 255, 255, 0.76);
+    --toggle-bg: rgba(255, 255, 255, 0.95);
+    --toggle-text: #5d3ca8;
+    --toggle-border: rgba(130, 73, 196, 0.18);
+    --toggle-shadow: rgba(90, 54, 160, 0.12);
+    --footer-text: #ffffff;
+}
+
+body.dark-mode {
+    --page-text: #dccdff;
+    --page-gradient: linear-gradient(180deg, #141229 0%, #1a1730 55%, #271d41 100%);
+    --header-bg: rgba(18, 16, 33, 0.86);
+    --header-border: rgba(195, 173, 255, 0.22);
+    --brand-color: #e8ddff;
+    --tab-bg: rgba(45, 37, 73, 0.9);
+    --tab-text: #e7dbff;
+    --tab-hover-bg: rgba(128, 93, 224, 0.34);
+    --tab-shadow: rgba(8, 6, 20, 0.45);
+    --tab-active-bg: #8a68df;
+    --tab-active-text: #ffffff;
+    --panel-bg: rgba(24, 20, 42, 0.92);
+    --panel-border: rgba(197, 174, 255, 0.22);
+    --panel-shadow: rgba(5, 4, 14, 0.5);
+    --heading-color: #f0e6ff;
+    --body-copy: #d2bfff;
+    --card-face-bg: rgba(72, 58, 118, 0.55);
+    --card-face-border: rgba(188, 161, 255, 0.3);
+    --card-back-bg: rgba(69, 55, 115, 0.65);
+    --card-title: #eadcff;
+    --card-description: #efe8ff;
+    --desc-panel-bg: rgba(18, 14, 34, 0.68);
+    --toggle-bg: rgba(45, 37, 73, 0.95);
+    --toggle-text: #f1e8ff;
+    --toggle-border: rgba(197, 174, 255, 0.35);
+    --toggle-shadow: rgba(7, 6, 17, 0.5);
+    --footer-text: #dcccff;
+}
+
 body {
     font-family: 'CK Jot', cursive;
     font-weight: 700;
     line-height: 1.5;
-    color: #8c74c4;
-    background: linear-gradient(180deg, #6677d7 0%, #8b72d2 52%, #b67cc5 100%);
+    color: var(--page-text);
+    background: var(--page-gradient);
     min-height: 100vh;
     position: relative;
 }
@@ -73,9 +133,9 @@ footer {
 }
 
 header.site-header {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: var(--header-bg);
     backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(130, 73, 196, 0.18);
+    border-bottom: 1px solid var(--header-border);
     padding: 1.5rem 0;
     text-align: center;
     position: sticky;
@@ -88,7 +148,7 @@ header.site-header {
     display: inline-block;
     font-size: 2.6rem;
     font-weight: 700;
-    color: #5d3ca8;
+    color: var(--brand-color);
     text-align: center;
     letter-spacing: 0.08em;
     font-family: 'CK Jot', cursive;
@@ -176,8 +236,8 @@ header.site-header {
 
 .tab-nav a {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.95);
-    color: #5d3ca8;
+    background: var(--tab-bg);
+    color: var(--tab-text);
     text-decoration: none;
     padding: 0.9rem 1.25rem;
     border-radius: 999px;
@@ -188,16 +248,39 @@ header.site-header {
 
 .tab-nav a:hover,
 .tab-nav a:focus-visible {
-    background: rgba(130, 73, 196, 0.08);
+    background: var(--tab-hover-bg);
     transform: translateY(-1px);
-    box-shadow: 0 10px 20px rgba(90, 54, 160, 0.12);
+    box-shadow: 0 10px 20px var(--tab-shadow);
 }
 
 .tab-nav a.active {
-    background: #5d3ca8;
-    color: #ffffff;
-    border-color: #5d3ca8;
+    background: var(--tab-active-bg);
+    color: var(--tab-active-text);
+    border-color: var(--tab-active-bg);
     box-shadow: 0 10px 20px rgba(90, 54, 160, 0.18);
+}
+
+.theme-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    border: 1px solid var(--toggle-border);
+    background: var(--toggle-bg);
+    color: var(--toggle-text);
+    border-radius: 999px;
+    padding: 0.5rem 0.85rem;
+    font-size: 0.88rem;
+    font-family: 'CK Jot', cursive;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 16px var(--toggle-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px var(--toggle-shadow);
 }
 
 main {
@@ -207,10 +290,10 @@ main {
 }
 
 .content-panel {
-    background: rgba(255, 255, 255, 0.92);
+    background: var(--panel-bg);
     border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0 30px 80px rgba(22, 22, 52, 0.12);
+    border: 1px solid var(--panel-border);
+    box-shadow: 0 30px 80px var(--panel-shadow);
     overflow: hidden;
 }
 
@@ -220,7 +303,7 @@ main {
 }
 
 .section h2 {
-    color: #5d3ca8;
+    color: var(--heading-color);
     font-size: 2.1rem;
     margin-bottom: 1.15rem;
     font-family: 'CK Jot', cursive;
@@ -249,7 +332,7 @@ main {
 }
 
 .section p {
-    color: #8a76be;
+    color: var(--body-copy);
     font-size: 1.08rem;
     line-height: 1.65;
     max-width: 860px;
@@ -264,7 +347,7 @@ main {
 }
 
 .interest-card {
-    min-height: 240px;
+    min-height: 170px;
     perspective: 1000px;
     border-radius: 18px;
     outline: none;
@@ -273,7 +356,7 @@ main {
 .interest-card-inner {
     position: relative;
     width: 100%;
-    min-height: 240px;
+    min-height: 170px;
     transform-style: preserve-3d;
     transition: transform 0.6s ease;
 }
@@ -291,8 +374,8 @@ main {
 .interest-face {
     position: absolute;
     inset: 0;
-    background: rgba(118, 95, 227, 0.08);
-    border: 1px solid rgba(130, 73, 196, 0.18);
+    background: var(--card-face-bg);
+    border: 1px solid var(--card-face-border);
     padding: 1.2rem 1rem;
     border-radius: 18px;
     display: flex;
@@ -305,44 +388,7 @@ main {
 
 .interest-back {
     transform: rotateY(180deg);
-    position: relative;
-    justify-content: flex-end;
-    background-color: rgba(118, 95, 227, 0.12);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
-}
-
-.interest-back::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.92) 24%, rgba(255, 255, 255, 0.18) 72%);
-}
-
-.interest-card:nth-child(1) .interest-back {
-    background-image: url('assets/interests/piano.jpg');
-}
-
-.interest-card:nth-child(2) .interest-back {
-    background-image: url('assets/interests/painting.jpg');
-}
-
-.interest-card:nth-child(3) .interest-back {
-    background-image: url('assets/interests/drawing.jpg');
-}
-
-.interest-card:nth-child(4) .interest-back {
-    background-image: url('assets/interests/crocheting.jpg');
-}
-
-.interest-card:nth-child(5) .interest-back {
-    background-image: url('assets/interests/sculpting.jpg');
-}
-
-.interest-card:nth-child(6) .interest-back {
-    background-image: url('assets/interests/modeling-3d.jpg');
+    background-color: var(--card-back-bg);
 }
 
 .interest-card .icon {
@@ -355,7 +401,7 @@ main {
 }
 
 .interest-card p {
-    color: #836abf;
+    color: var(--card-title);
 }
 
 .interest-title {
@@ -372,18 +418,8 @@ main {
 }
 
 .interest-back .interest-desc {
-    color: #5f4d97;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    max-width: none;
-    padding: 0.55rem 0.6rem;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.76);
-}
-
-.interest-back-image {
-    display: none;
+    color: var(--card-description);
+    max-width: 260px;
 }
 
 .favorites-grid {
@@ -417,8 +453,8 @@ main {
 .favorite-face {
     position: absolute;
     inset: 0;
-    background: rgba(118, 95, 227, 0.06);
-    border: 1px solid rgba(130, 73, 196, 0.12);
+    background: var(--card-face-bg);
+    border: 1px solid var(--card-face-border);
     padding: 0.9rem 1rem;
     border-radius: 14px;
     display: flex;
@@ -430,12 +466,12 @@ main {
 
 .favorite-back {
     transform: rotateY(180deg);
-    background: rgba(118, 95, 227, 0.12);
+    background: var(--card-back-bg);
 }
 
 .favorite-label,
 .favorite-value {
-    color: #836abf;
+    color: var(--card-title);
     font-weight: 700;
     line-height: 1.35;
 }
@@ -447,9 +483,13 @@ main {
 
 footer {
     text-align: center;
-    color: #ffffff;
+    color: var(--footer-text);
     padding: 1.5rem 1rem 2rem;
     font-size: 0.95rem;
+}
+
+body.dark-mode::after {
+    opacity: 0.45;
 }
 
 @media (max-width: 960px) {
@@ -463,6 +503,13 @@ footer {
 }
 
 @media (max-width: 680px) {
+    .theme-toggle {
+        right: 0.75rem;
+        top: 0.7rem;
+        padding: 0.45rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
     .site-header .brand {
         font-size: 2rem;
         margin-bottom: 0.8rem;
