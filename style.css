@@ -172,6 +172,10 @@ header.site-header {
     user-select: none;
 }
 
+body.dark-mode .brand-cat-trigger {
+    filter: brightness(0.72) saturate(0.9) contrast(1.05) drop-shadow(0 6px 10px rgba(68, 45, 130, 0.25));
+}
+
 .site-header .brand.cat-visible .brand-cat-trigger,
 .site-header .brand.cat-active .brand-cat-trigger {
     opacity: 0.95;
@@ -206,6 +210,10 @@ header.site-header {
     object-fit: contain;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
     opacity: 1;
+}
+
+body.dark-mode .cat-drop[src] {
+    filter: brightness(0.72) saturate(0.9) contrast(1.05) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.45));
 }
 
 @keyframes cat-fall {
@@ -411,6 +419,11 @@ main {
     height: 3rem;
     align-items: center;
     justify-content: center;
+}
+
+body.dark-mode .interest-card .icon,
+body.dark-mode .fav-icon {
+    filter: brightness(0.74) saturate(0.88) contrast(1.05);
 }
 
 .interest-card p {
