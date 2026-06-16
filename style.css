@@ -46,33 +46,33 @@ html {
 }
 
 body.dark-mode {
-    --page-text: #dccbff;
-    --page-gradient: linear-gradient(180deg, #060b1e 0%, #0d1736 52%, #1a1140 100%);
-    --header-bg: rgba(0, 0, 0, 0.86);
-    --header-border: rgba(198, 176, 255, 0.24);
-    --brand-color: #d9c4ff;
-    --tab-bg: rgba(0, 0, 0, 0.82);
-    --tab-text: #e2d2ff;
-    --tab-hover-bg: rgba(139, 108, 229, 0.36);
-    --tab-shadow: rgba(8, 6, 20, 0.45);
-    --tab-active-bg: #b29af0;
+    --page-text: #bca8e6;
+    --page-gradient: linear-gradient(180deg, #2f3f90 0%, #4f358c 52%, #6f3f84 100%);
+    --header-bg: rgba(0, 0, 0, 0.74);
+    --header-border: rgba(93, 60, 168, 0.42);
+    --brand-color: #c9b3f2;
+    --tab-bg: rgba(0, 0, 0, 0.9);
+    --tab-text: #c8b2f0;
+    --tab-hover-bg: rgba(130, 73, 196, 0.32);
+    --tab-shadow: rgba(30, 16, 58, 0.55);
+    --tab-active-bg: #4a318a;
     --tab-active-text: #000000;
-    --panel-bg: rgba(0, 0, 0, 0.82);
-    --panel-border: rgba(198, 176, 255, 0.25);
-    --panel-shadow: rgba(5, 4, 14, 0.5);
-    --heading-color: #ece1ff;
-    --body-copy: #e8dbff;
-    --card-face-bg: rgba(20, 13, 42, 0.76);
-    --card-face-border: rgba(188, 161, 255, 0.3);
-    --card-back-bg: rgba(16, 10, 36, 0.82);
-    --card-title: #e8d9ff;
-    --card-description: #f3edff;
-    --desc-panel-bg: rgba(0, 0, 0, 0.64);
-    --toggle-bg: rgba(0, 0, 0, 0.88);
-    --toggle-text: #eedfff;
-    --toggle-border: rgba(197, 174, 255, 0.35);
-    --toggle-shadow: rgba(7, 6, 17, 0.5);
-    --footer-text: #e3d4ff;
+    --panel-bg: rgba(0, 0, 0, 0.88);
+    --panel-border: rgba(93, 60, 168, 0.45);
+    --panel-shadow: rgba(10, 8, 24, 0.62);
+    --heading-color: #8a76be;
+    --body-copy: #dbcfff;
+    --card-face-bg: rgba(93, 60, 168, 0.2);
+    --card-face-border: rgba(130, 73, 196, 0.4);
+    --card-back-bg: rgba(93, 60, 168, 0.28);
+    --card-title: #8a76be;
+    --card-description: #c3adef;
+    --desc-panel-bg: rgba(0, 0, 0, 0.72);
+    --toggle-bg: rgba(0, 0, 0, 0.9);
+    --toggle-text: #dbc8ff;
+    --toggle-border: rgba(130, 73, 196, 0.45);
+    --toggle-shadow: rgba(15, 10, 34, 0.6);
+    --footer-text: #d0bdf4;
 }
 
 body {
@@ -110,6 +110,7 @@ body::before {
         8rem 8rem,
         auto,
         auto;
+    opacity: 0.34;
 }
 
 body::after {
@@ -118,11 +119,11 @@ body::after {
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Ctext x='15' y='25' font-size='19' fill='%23d4d0e8' opacity='0.7'%3E☆%3C/text%3E%3Ctext x='85' y='40' font-size='18' fill='%23d4d0e8' opacity='0.72'%3E☆%3C/text%3E%3Ctext x='145' y='60' font-size='18' fill='%23d4d0e8' opacity='0.7'%3E☆%3C/text%3E%3Ctext x='50' y='85' font-size='18' fill='%23e8e5f5' opacity='0.62'%3E✧%3C/text%3E%3Ctext x='160' y='110' font-size='17' fill='%23d4d0e8' opacity='0.65'%3E☆%3C/text%3E%3Ctext x='25' y='130' font-size='18' fill='%23d4d0e8' opacity='0.7'%3E☆%3C/text%3E%3Ctext x='110' y='155' font-size='18' fill='%23e8e5f5' opacity='0.64'%3E✧%3C/text%3E%3Ctext x='175' y='175' font-size='17' fill='%23d4d0e8' opacity='0.65'%3E☆%3C/text%3E%3Ctext x='70' y='25' font-size='18' fill='%23e8e5f5' opacity='0.62'%3E✧%3C/text%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Ctext x='15' y='25' font-size='19' fill='white' opacity='0.7'%3E☆%3C/text%3E%3Ctext x='85' y='40' font-size='18' fill='white' opacity='0.72'%3E☆%3C/text%3E%3Ctext x='145' y='60' font-size='18' fill='white' opacity='0.7'%3E☆%3C/text%3E%3Ctext x='50' y='85' font-size='18' fill='white' opacity='0.62'%3E✧%3C/text%3E%3Ctext x='160' y='110' font-size='17' fill='white' opacity='0.65'%3E☆%3C/text%3E%3Ctext x='25' y='130' font-size='18' fill='white' opacity='0.7'%3E☆%3C/text%3E%3Ctext x='110' y='155' font-size='18' fill='white' opacity='0.64'%3E✧%3C/text%3E%3Ctext x='175' y='175' font-size='17' fill='white' opacity='0.65'%3E☆%3C/text%3E%3Ctext x='70' y='25' font-size='18' fill='white' opacity='0.62'%3E✧%3C/text%3E%3C/svg%3E");
     background-size: 200px 200px;
     background-repeat: repeat;
     background-position: 0 0;
-    opacity: 0.9;
+    opacity: 0.34;
 }
 
 header.site-header,
@@ -148,7 +149,7 @@ header.site-header {
     display: inline-block;
     font-size: 2.6rem;
     font-weight: 700;
-    color: var(--brand-color);
+    color: var(--card-title);
     text-align: center;
     letter-spacing: 0.08em;
     font-family: 'CK Jot', cursive;
@@ -489,13 +490,20 @@ footer {
 }
 
 body.dark-mode::before {
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M60 8 L72 48 L112 60 L72 72 L60 112 L48 72 L8 60 L48 48 Z' fill='%23dbcfff'/%3E%3Cpath d='M20 18 L24 30 L36 34 L24 38 L20 50 L16 38 L4 34 L16 30 Z' fill='%23dbcfff'/%3E%3Cpath d='M96 16 L100 28 L112 32 L100 36 L96 48 L92 36 L80 32 L92 28 Z' fill='%23dbcfff'/%3E%3Cpath d='M18 82 L22 94 L34 98 L22 102 L18 114 L14 102 L2 98 L14 94 Z' fill='%23dbcfff'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M60 8 L72 48 L112 60 L72 72 L60 112 L48 72 L8 60 L48 48 Z' fill='%23dbcfff'/%3E%3Cpath d='M20 18 L24 30 L36 34 L24 38 L20 50 L16 38 L4 34 L16 30 Z' fill='%23dbcfff'/%3E%3Cpath d='M96 16 L100 28 L112 32 L100 36 L96 48 L92 36 L80 32 L92 28 Z' fill='%23dbcfff'/%3E%3Cpath d='M18 82 L22 94 L34 98 L22 102 L18 114 L14 102 L2 98 L14 94 Z' fill='%23dbcfff'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M60 8 L72 48 L112 60 L72 72 L60 112 L48 72 L8 60 L48 48 Z' fill='%23dbcfff'/%3E%3Cpath d='M20 18 L24 30 L36 34 L24 38 L20 50 L16 38 L4 34 L16 30 Z' fill='%23dbcfff'/%3E%3Cpath d='M96 16 L100 28 L112 32 L100 36 L96 48 L92 36 L80 32 L92 28 Z' fill='%23dbcfff'/%3E%3Cpath d='M18 82 L22 94 L34 98 L22 102 L18 114 L14 102 L2 98 L14 94 Z' fill='%23dbcfff'/%3E%3C/svg%3E"),
+        radial-gradient(circle at top left, rgba(219, 207, 255, 0.16), transparent 36%),
+        radial-gradient(circle at bottom right, rgba(219, 207, 255, 0.12), transparent 34%);
     opacity: 0.2;
-    filter: brightness(0.22);
+    filter: none;
 }
 
 body.dark-mode::after {
-    opacity: 0.22;
-    filter: brightness(0.3);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Ctext x='15' y='25' font-size='19' fill='%23dbcfff' opacity='0.7'%3E☆%3C/text%3E%3Ctext x='85' y='40' font-size='18' fill='%23dbcfff' opacity='0.72'%3E☆%3C/text%3E%3Ctext x='145' y='60' font-size='18' fill='%23dbcfff' opacity='0.7'%3E☆%3C/text%3E%3Ctext x='50' y='85' font-size='18' fill='%23dbcfff' opacity='0.62'%3E✧%3C/text%3E%3Ctext x='160' y='110' font-size='17' fill='%23dbcfff' opacity='0.65'%3E☆%3C/text%3E%3Ctext x='25' y='130' font-size='18' fill='%23dbcfff' opacity='0.7'%3E☆%3C/text%3E%3Ctext x='110' y='155' font-size='18' fill='%23dbcfff' opacity='0.64'%3E✧%3C/text%3E%3Ctext x='175' y='175' font-size='17' fill='%23dbcfff' opacity='0.65'%3E☆%3C/text%3E%3Ctext x='70' y='25' font-size='18' fill='%23dbcfff' opacity='0.62'%3E✧%3C/text%3E%3C/svg%3E");
+    opacity: 0.35;
+    filter: none;
 }
 
 @media (max-width: 960px) {
