@@ -29,6 +29,7 @@ html {
     --tab-active-text: #ffffff;
     --panel-bg: rgba(255, 255, 255, 0.92);
     --panel-border: rgba(255, 255, 255, 0.8);
+    --panel-arrow-border: var(--panel-border);
     --panel-shadow: rgba(22, 22, 52, 0.12);
     --heading-color: #5d3ca8;
     --body-copy: #8a76be;
@@ -48,17 +49,18 @@ html {
 body.dark-mode {
     --page-text: #bca8e6;
     --page-gradient: linear-gradient(180deg, #2f3f90 0%, #4f358c 52%, #6f3f84 100%);
-    --header-bg: rgba(0, 0, 0, 0.74);
+    --header-bg: rgba(0, 0, 0, 0.58);
     --header-border: rgba(93, 60, 168, 0.42);
     --brand-color: #c9b3f2;
-    --tab-bg: rgba(0, 0, 0, 0.9);
+    --tab-bg: rgba(0, 0, 0, 0.72);
     --tab-text: var(--heading-color);
     --tab-hover-bg: rgba(130, 73, 196, 0.32);
     --tab-shadow: rgba(30, 16, 58, 0.55);
     --tab-active-bg: #4a318a;
     --tab-active-text: #000000;
-    --panel-bg: rgba(0, 0, 0, 0.88);
+    --panel-bg: rgba(0, 0, 0, 0.72);
     --panel-border: rgba(93, 60, 168, 0.45);
+    --panel-arrow-border: var(--panel-border);
     --panel-shadow: rgba(10, 8, 24, 0.62);
     --heading-color: #8a76be;
     --body-copy: #dbcfff;
@@ -67,8 +69,8 @@ body.dark-mode {
     --card-back-bg: rgba(93, 60, 168, 0.28);
     --card-title: #8a76be;
     --card-description: #c3adef;
-    --desc-panel-bg: rgba(0, 0, 0, 0.72);
-    --toggle-bg: rgba(0, 0, 0, 0.9);
+    --desc-panel-bg: rgba(0, 0, 0, 0.6);
+    --toggle-bg: rgba(0, 0, 0, 0.72);
     --toggle-text: #dbc8ff;
     --toggle-border: rgba(130, 73, 196, 0.45);
     --toggle-shadow: rgba(15, 10, 34, 0.6);
@@ -423,7 +425,7 @@ body.dark-mode .cat-drop[src] {
 .tour-guide-panel.tour-arrow-up::after {
     opacity: 1;
     width: 1.1rem;
-    height: 0.62rem;
+    height: 0.66rem;
     left: var(--tour-arrow-x, 50%);
     top: -0.62rem;
     transform: translateX(-50%);
@@ -433,12 +435,12 @@ body.dark-mode .cat-drop[src] {
 
 .tour-guide-panel.tour-arrow-up::before {
     opacity: 1;
-    width: 1.36rem;
-    height: 0.78rem;
+    width: 1.2rem;
+    height: 0.72rem;
     left: var(--tour-arrow-x, 50%);
-    top: -0.78rem;
+    top: -0.68rem;
     transform: translateX(-50%);
-    background: var(--panel-border);
+    background: var(--panel-arrow-border);
     clip-path: polygon(50% 0, 0 100%, 100% 100%);
 }
 
@@ -455,12 +457,12 @@ body.dark-mode .cat-drop[src] {
 
 .tour-guide-panel.tour-arrow-down::before {
     opacity: 1;
-    width: 1.36rem;
-    height: 0.78rem;
+    width: 1.2rem;
+    height: 0.68rem;
     left: var(--tour-arrow-x, 50%);
-    bottom: -0.78rem;
+    bottom: -0.68rem;
     transform: translateX(-50%);
-    background: var(--panel-border);
+    background: var(--panel-arrow-border);
     clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 
@@ -477,12 +479,12 @@ body.dark-mode .cat-drop[src] {
 
 .tour-guide-panel.tour-arrow-left::before {
     opacity: 1;
-    width: 0.78rem;
-    height: 1.36rem;
-    left: -0.78rem;
+    width: 0.68rem;
+    height: 1.2rem;
+    left: -0.68rem;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--panel-border);
+    background: var(--panel-arrow-border);
     clip-path: polygon(0 50%, 100% 0, 100% 100%);
 }
 
@@ -499,12 +501,12 @@ body.dark-mode .cat-drop[src] {
 
 .tour-guide-panel.tour-arrow-right::before {
     opacity: 1;
-    width: 0.78rem;
-    height: 1.36rem;
-    right: -0.78rem;
+    width: 0.68rem;
+    height: 1.2rem;
+    right: -0.68rem;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--panel-border);
+    background: var(--panel-arrow-border);
     clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
@@ -525,7 +527,7 @@ body.dark-mode .cat-drop[src] {
 }
 
 body.dark-mode .tour-close-btn {
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.72);
     color: #dbc8ff;
     border-color: rgba(130, 73, 196, 0.6);
 }
