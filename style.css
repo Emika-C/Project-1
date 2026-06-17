@@ -461,6 +461,13 @@ body.dark-mode .cat-drop[src] {
     padding: 0.3rem 0.6rem;
     border-radius: 999px;
     cursor: pointer;
+    z-index: 10;
+}
+
+body.dark-mode .tour-close-btn {
+    background: rgba(0, 0, 0, 0.95);
+    color: #dbc8ff;
+    border-color: rgba(130, 73, 196, 0.6);
 }
 
 .tour-cat-avatar {
@@ -746,7 +753,12 @@ body.dark-mode .fav-icon {
     background: var(--card-back-bg);
 }
 
-.favorite-label,
+.favorite-label {
+    color: var(--card-description);
+    font-weight: 700;
+    line-height: 1.35;
+}
+
 .favorite-value {
     color: var(--card-title);
     font-weight: 700;

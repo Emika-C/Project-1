@@ -62,14 +62,14 @@ applyTheme(getInitialTheme());
 const tourSteps = [
     {
         title: 'Meow! Welcome to the website!',
-        text: 'I am your cat tour guide. I can show you how to explore the tabs, switch themes, and try the flipping cards.',
+        text: 'Hello! I am your cat tour guide. I will show you the features of this website, such as how to explore the tabs.',
         selector: '.site-header .brand',
         panelPlacement: 'bottom-right',
         arrowDirection: 'none'
     },
     {
-        title: 'Use the tabs up top',
-        text: 'These tab buttons let you jump between About Me, Interests, Favorites, and the rest of the pages.',
+        title: 'Navigation Tabs',
+        text: 'Click on these tabs to switch between pages.',
         selector: '.tab-nav',
         panelPlacement: 'top-center',
         panelTop: '10.8rem',
@@ -77,8 +77,8 @@ const tourSteps = [
         arrowAlign: 'center'
     },
     {
-        title: 'Try the dark mode button',
-        text: 'Tap Dark Mode or Light Mode in the top-right corner to switch the site theme whenever you want.',
+        title: 'Dark/Light Mode',
+        text: 'Tap the dark/light mode button to switch the site\'s theme.',
         selector: '.theme-toggle',
         panelPlacement: 'top-right',
         panelTop: '4.8rem',
@@ -87,8 +87,8 @@ const tourSteps = [
         arrowTargetSelector: '.theme-toggle'
     },
     {
-        title: 'Interests cards flip',
-        text: 'On the Interests page, hover or click the cards to flip them and reveal details on the back. You can use the tabs to visit Interests anytime during the tour.',
+        title: 'Interests Cards',
+        text: 'On the Interests page, hover over cards to flip them and reveal more details. Visit the Interests page anytime.',
         selector: '.interest-card',
         panelPlacement: 'top-left',
         panelTop: '10.4rem',
@@ -97,8 +97,8 @@ const tourSteps = [
         panelTargetSelector: '.tab-nav a[data-nav="interests"]'
     },
     {
-        title: 'Favorites cards flip too',
-        text: 'On the Favorites page, these cards flip the same way so you can see each answer on the back side. Use the tabs to switch there while the tour stays open.',
+        title: 'Favorites Cards',
+        text: 'On the Favorites page, hover over cards similarly to flip them and reveal details. Visit the Favorites page anytime.',
         selector: '.favorite-card',
         panelPlacement: 'top-left',
         panelTop: '10.4rem',
